@@ -12,10 +12,14 @@
 <p>The code can be explained using the following steps: 
     <ol>
     1. The user is allowed to give an input, which would be ticker of the stock they want to predict for. <br>
-    2. Simple plots are generated showing the variance of the stock price over a long period (20 years) and over a shorter period (1 year). The plots can be seen below:
-    <br>
-    <img src="./plots/closing_price.jpeg">
+    2. Simple plots are generated showing the variance of the stock price over a long period (20 years) and over a shorter period (1 year). The plots can be seen below: <br>
+    </ol>
+</p>
 
+<img src="./plots/closing_price.jpeg" alt="Closing Price of Microsoft Stock">
+    
+<p>
+    <ol>
     3. A new column called 'Tomorrow' is added to the dataframe, which contains the closing price of the stock from the previous day. The reason to do this, instead of simply using the opening price is to avoid any external factors in the time between the closing and opening bell to affect the prediction. Thus the prediction made is purely off the price trend, and nothing in the interim between the closing and opening times.<br>
     4. Another column called 'Target' is added to the dataframe, which tells us whether the price at the opening bell tomorrow, is greater than the price at the closing bell the previous day. Of course, all the values in this column start of as False. This column will eventually be populated to indicate the upward or downward trend of the stock price.<br>
     5. The dataset is then split into training and testing data. Taking an arbitrary value of 3000 datapoints for the training data, and the rest of the datapoints for testing.<br>
